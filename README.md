@@ -26,6 +26,16 @@ With Gitaggle, programmer only needs thin computer
 (like ChromeBook), web browser (like Chrome), an account 
 on Kaggle, an account on GitHub in order to do programming job.
 
+
+============================================
+                TIMELINES
+  ---------------------------------------
+
+[ Jan 21, 2024 ]
+
++ Project is started.
+
+
 ```
 
 
