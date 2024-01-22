@@ -80,7 +80,7 @@ def commit(repo_dir, msg_file):
     os.system(cmd)
     
 def identity(repo_dir, name, email):
-    if repo_dir is None is None:
+    if repo_dir is None:
         print('=> [E] Folder is not found!')
         return
     if not os.path.exists(repo_dir):
