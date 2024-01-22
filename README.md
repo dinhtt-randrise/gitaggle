@@ -19,12 +19,15 @@ Software Development Working Environment w/ Kaggle & GitHub
 Gitaggle is a collection of tools which make Kaggle & GitHub
 being working environment for software development.
 
-With Gitaggle, programmer can write code in notebook editor
-of Kaggle, run code in Kaggle, manage source code in GitHub.
+With Gitaggle, programmer can write code in GitHub, run code
+in Kaggle, source code control via GitHub, run results
+provider (collect processed data from Kaggle notebook, show
+results via Web API) in droplets of DigitalOcean.
 
 With Gitaggle, programmer only needs thin computer 
 (like ChromeBook), web browser (like Chrome), an account 
-on Kaggle, an account on GitHub in order to do programming job.
+on Kaggle, an account on GitHub, an account on DigitalOcean
+in order to do programming job.
 
 
 ============================================
