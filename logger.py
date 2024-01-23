@@ -35,12 +35,15 @@ def log_exited(lid):
     os.system('mkdir -p "' + log_dir + '"')
     log_file = log_dir + '/exit.txt'
 
-    sn = gggh.read_text_file(log_file)
-    if sn == 'yes' or sn == 'y' or sn == '1':
-        return True
-    else:
+    try:
+        sn = gggh.read_text_file(log_file)
+        if sn == 'yes' or sn == 'y' or sn == '1':
+            return True
+        else:
+            return False
+    except Exception as e:
         return False
-    
+        
 def flush_log(lid):
     if lid not in ALL_LOGGER:
         return
