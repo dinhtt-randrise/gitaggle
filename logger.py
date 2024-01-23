@@ -19,6 +19,28 @@ def create_logger(gh_user_name, gh_user_email, gh_repo_url, nb_code):
     ALL_LOGGER[lid] = ld
     return lid
 
+def log_exited(lid):
+    if lid not in ALL_LOGGER:
+        return
+    ld = ALL_LOGGER[lid]
+    now = datetime.now()
+    root_dir = '/kaggle/tmp/logger-' + ld['nb_code'] + '-' + str(lid)
+    os.system('rm -rf "' + root_dir + '"')
+    os.system('mkdir -p "' + root_dir + '"')
+
+    folder_name = ld['repo_url'].split('/')[-1].replace('.git', '')
+    repo_dir = root_dir + '/' + folder_name
+    gggh.clone(ld['repo_url'], root_dir)
+    log_dir = repo_dir + '/nb/' + ld['nb_code']
+    os.system('mkdir -p "' + log_dir + '"')
+    log_file = log_dir + '/exit.txt'
+
+    sn = gggh.read_text_file(log_file)
+    if sn == 'yes' or sn == 'y' or sn == '1':
+        return True
+    else:
+        return False
+    
 def flush_log(lid):
     if lid not in ALL_LOGGER:
         return
