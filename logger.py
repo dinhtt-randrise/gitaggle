@@ -19,7 +19,7 @@ def create_logger(gh_user_name, gh_user_email, gh_repo_url, nb_code):
     ALL_LOGGER[lid] = ld
     return lid
 
-def log_exited(lid):
+def read_log_file(lid, path, def_val):
     if lid not in ALL_LOGGER:
         return
     ld = ALL_LOGGER[lid]
@@ -31,18 +31,17 @@ def log_exited(lid):
     folder_name = ld['repo_url'].split('/')[-1].replace('.git', '')
     repo_dir = root_dir + '/' + folder_name
     gggh.clone(ld['repo_url'], root_dir)
-    log_dir = repo_dir + '/nb/' + ld['nb_code']
+    fn = path.split('/'}[-1]
+    fd = path[:len(path) - len(fn) - 1]
+    log_dir = repo_dir + fd
     os.system('mkdir -p "' + log_dir + '"')
-    log_file = log_dir + '/exit.txt'
+    log_file = log_dir + '/' + fn
 
     try:
         sn = gggh.read_text_file(log_file)
-        if sn == 'yes' or sn == 'y' or sn == '1':
-            return True
-        else:
-            return False
+        return sn
     except Exception as e:
-        return False
+        return def_val
         
 def flush_log(lid):
     if lid not in ALL_LOGGER:
