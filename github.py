@@ -74,7 +74,7 @@ def commit(repo_dir, msg_file):
     if not os.path.exists(repo_dir) or not os.path.exists(msg_file):
         print('=> [E] File or folder does not exist!')
         return
-    cmd = 'cd "' + repo_dir + '" && git add *.* && git commit -F "' + msg_file + '" && git push'
+    cmd = 'cd "' + repo_dir + '" && git add *.* && git add * && git commit -F "' + msg_file + '" && git push'
     if debug_on():
         print('=> [CMD] ' + cmd)
     os.system(cmd)
