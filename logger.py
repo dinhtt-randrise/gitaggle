@@ -48,6 +48,8 @@ def flush_log(lid):
     if lid not in ALL_LOGGER:
         return
     ld = ALL_LOGGER[lid]
+    if len(ld['logs'].lstrip().rstrip()) == 0:
+        return
     now = datetime.now()
     root_dir = '/kaggle/tmp/logger-' + ld['nb_code'] + '-' + str(lid)
     os.system('rm -rf "' + root_dir + '"')
