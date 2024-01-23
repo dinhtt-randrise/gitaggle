@@ -39,6 +39,17 @@ in order to do programming job.
 + Project is started.
 
 
+============================================
+             REPOSITORIES
+  ---------------------------------------
+
+# Sample of Gitaggle Settings
+# https://github.com/dinhtt-randrise/gitaggle-settings
+
+# Sample of Gitaggle Environment Control Logger
+# https://github.com/dinhtt-randrise/gitaggle-env-ctl-logger
+
+
 ```
 
 
