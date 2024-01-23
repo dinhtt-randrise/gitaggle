@@ -31,7 +31,7 @@ def read_log_file(lid, path, def_val):
     folder_name = ld['repo_url'].split('/')[-1].replace('.git', '')
     repo_dir = root_dir + '/' + folder_name
     gggh.clone(ld['repo_url'], root_dir)
-    fn = path.split('/'}[-1]
+    fn = path.split('/')[-1]
     fd = path[:len(path) - len(fn) - 1]
     log_dir = repo_dir + fd
     os.system('mkdir -p "' + log_dir + '"')
