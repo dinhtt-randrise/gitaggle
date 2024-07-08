@@ -38,6 +38,10 @@ in order to do programming job.
 
 + Project is started.
 
+[ Feb 1, 2024 ]
+
++ Version 0.1 is completed
+
 
 ============================================
              REPOSITORIES
